@@ -82,7 +82,12 @@
                                      console.log(rightCoordinates);
                                    }
                                  }, e => {
-                                   sniper.style.animation = "none";
+                                   if (sniper.classList.contains('sniperDeath')) {
+                                     
+                                   }else{
+                                      sniper.style.animation = "none";
+                                   }
+                                   
 
                                    console.log("a is released");
                                  });
@@ -93,12 +98,9 @@
                                console.log(topCoordinates);
                              }
                            }, (e)=> {
-                               if (sniper.classList.contains('sniperDeath')) {
-                                   
-                               }
-                               else{
+                               
                                 sniper.style.animation = "none";
-                               }
+                               
                              
                              console.log("a is released");
                            });
